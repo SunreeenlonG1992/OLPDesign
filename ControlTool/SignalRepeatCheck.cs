@@ -45,7 +45,10 @@ namespace ControlTool
         }
         public override void Execute(object cmdParams)
         {
-            
+            TxObjectList objlist = TxApplication.ActiveDocument.PhysicalRoot.GetAllDescendants(new TxTypeFilter(typeof(TxPlcSignalBase)));
+
+
+
         }
     }
 }
