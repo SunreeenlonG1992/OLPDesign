@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OLPCOPY", "OLPCOPY\OLPCOPY.csproj", "{F21A4260-42FA-4991-94CB-8712D92FC09D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotOLPTool", "OLPCOPY\RobotOLPTool.csproj", "{F21A4260-42FA-4991-94CB-8712D92FC09D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlTool", "ControlTool\ControlTool.csproj", "{EEE8AAB6-6C4F-4A19-9D32-96317FDA89FF}"
 EndProject

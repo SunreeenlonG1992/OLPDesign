@@ -1,14 +1,14 @@
 using System.Resources;
 using Tecnomatix.Engineering;
 
-namespace example
+namespace RobotOLPTool
 {
     /// <summary>
     /// Summary description for MypathCmd.
     /// </summary>
-    public class MypathCmd : TxButtonCommand
+    public class OLPCOPY : TxButtonCommand
     {
-        public MypathCmd()
+        public OLPCOPY()
         {
         }
 
@@ -16,7 +16,7 @@ namespace example
         {
             get
             {
-                return "_Mypath";
+                return "_OLPCOPY";
             }
         }
 
@@ -32,14 +32,14 @@ namespace example
         {
             get
             {
-                return "BMP.OLPCopy.bmp";
+                return "CMDbmp.OLPCopy.bmp";
             }
         }
         public override string LargeBitmap
         {
             get
             {
-                return "BMP.OLPCopy.png";
+                return "CMDbmp.OLPCopy.png";
             }
         }
 
@@ -50,14 +50,10 @@ namespace example
             //    return;
             //}
 
-            MypathForm f = new MypathForm();
+            example.MypathForm f = new example.MypathForm();
             f.Show();
         }
 
-        private ResourceManager GetResourceManager()
-        {
-          
-            return new ResourceManager("MinoApi.StringTable", GetType().Assembly);
-        }
+        
     }
 }

@@ -30,6 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EngineeringInternalExtension">
+      <HintPath>..\..\..\..\Program Files\Tecnomatix_14.1.1\eMPower\EngineeringInternalExtension.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -63,18 +73,25 @@
     <Compile Include="AddOperationToEditorByName\AddOperationToEditorByName.cs" />
     <Compile Include="AddOperationToEditorByName\RemoveAllInEditor.cs" />
     <Compile Include="CreateRobotPrograms.cs" />
+    <Compile Include="CreateCollisionLB.cs" />
+    <Compile Include="CreateCollisionLBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCollisionLBForm.designer.cs">
+      <DependentUpon>CreateCollisionLBForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OLP\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OLP\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="OLP\MypathCmd.cs" />
-    <Compile Include="OLP\MypathForm.cs">
+    <Compile Include="OLP\OLPCOPYcmd.cs" />
+    <Compile Include="OLP\OLPCOPYForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OLP\MypathForm.designer.cs">
-      <DependentUpon>MypathForm.cs</DependentUpon>
+    <Compile Include="OLP\OLPCOPYForm.designer.cs">
+      <DependentUpon>OLPCOPYForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -87,16 +104,23 @@
     <EmbeddedResource Include="AddOperationToEditorByName\AddOperationForm.resx">
       <DependentUpon>AddOperationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OLP\MypathForm.resx">
-      <DependentUpon>MypathForm.cs</DependentUpon>
+    <EmbeddedResource Include="CreateCollisionLBForm.resx">
+      <DependentUpon>CreateCollisionLBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLP\OLPCOPYForm.resx">
+      <DependentUpon>OLPCOPYForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BMP\" />
+    <EmbeddedResource Include="CMDbmp\CreateCollisionLB.bmp" />
+    <EmbeddedResource Include="CMDbmp\CreateCollisionLB.png" />
+    <EmbeddedResource Include="CMDbmp\OLPCopy.bmp" />
+    <EmbeddedResource Include="CMDbmp\OLPCopy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

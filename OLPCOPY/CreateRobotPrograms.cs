@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tecnomatix.Engineering;
 
-namespace OLPCOPY
+namespace RobotOLPTool
 {
     public class CreateRobotPrograms : TxButtonCommand
     {

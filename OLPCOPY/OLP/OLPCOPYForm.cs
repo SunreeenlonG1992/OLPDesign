@@ -15,6 +15,8 @@ namespace example
             InitializeComponent();
             TxApplication.ActiveSelection.ItemsSet += new TxSelection_ItemsSetEventHandler(this.myItems_set);
             isEditForm = true;
+            this.Width = 915;
+            this.Height = 680;
         }
 
         public void myItems_set(object sender, Tecnomatix.Engineering.TxSelection_ItemsSetEventArgs args)
@@ -269,6 +271,10 @@ namespace example
         /// <param name="e"></param>
         private void addweldName_Click(object sender, EventArgs e)
         {
+            if (sourceLocation_tb.Object is null)
+            {
+                return;
+            }
             ITxRoboticLocationOperation ro = sourceLocation_tb.Object as ITxRoboticLocationOperation;
             ITxTypeFilter objFilter = new TxTypeFilter(typeof(ITxRoboticLocationOperation));
             TxObjectList obj = ro.ParentRoboticOperation.GetAllDescendants(objFilter);
